@@ -23,32 +23,25 @@ $colorSectionFoodUL:#CC0D22;
     border-radius:50%;
     border:$border
 }
-%arrows{
-    content:'';
-    width:34px;
-    height:4px;
-    position:absolute;
-    border-radius:4px;
-    background-color:$colorHeader;
-}
-%lines{
-    position: absolute;
-    width: 1px;
-    height:32px;
-    background: $colorHeader;
-    content: '';
-    top:0px;
-    opacity:0;
-    -webkit-animation:lines .5s linear 1.55s forwards;
-    animation:lines .5s linear 1.55s forwards;
+@mixin pseudo($top, $left, $width,$height,$background, $opacity){
+    
+                display:block;
+                content: '';
+                opacity:$opacity;
+                top: $top;
+                left: $left;
+                width: $width;
+                height: $height;
+                background: $background;
+                
+            
 }
 
 
-
-html,body,header{
+html,body,header, footer{
     @include size(100%, 100% );
     position:relative;
-    box-sizing:berder-box;
+    box-sizing:border-box;
 }
 .bckg{
         position:absolute;
@@ -58,7 +51,6 @@ html,body,header{
         background-repeat:no-repeat;
         background-size:cover; 
 };
-
 header{
 
     .img{
@@ -66,8 +58,6 @@ header{
         @extend .bckg;
         background-image: url('../img/lisc.jpg');
        }
-
-
     h1{
         @include font(86px,('Bilbo', cursive),($colorHeader));
         text-shadow:1px 1px rgb(20,50,20);
@@ -77,17 +67,11 @@ header{
         line-height: 1.5;
         letter-spacing: .05em;
         opacity:0;
-        -webkit-animation: header .75s linear .75s forwards;
-        animation:header .75s linear .75s forwards;
         &:after{
-            width:5%;
-            top:100%;
-            left:0px;
-            content:'';
+            @include pseudo(100%, 0px, 5%,2px,($colorHeader),1);
             display:block;
-            height:2px;
             border-radius: 6px;
-            background-color:$colorHeader;
+            
         }
     }
     h2{
@@ -96,9 +80,6 @@ header{
         opacity:0;
         padding: 0% 0% 7% 5.25%;
         position: relative;
-        -webkit-animation: header .75s linear .75s forwards;
-        animation:header .75s linear .75s forwards;
-
     }
     .arrow{
         @include wheels(85px, relative, (3px solid $colorHeader));
@@ -106,24 +87,20 @@ header{
         cursor:pointer;
         display:block;
         opacity:0;
-        -webkit-animation:header .75s linear 2s forwards;
-        animation:header .75s linear 2s forwards;
-        transition:.55s;
         &:before{
-            @extend %arrows;
+           @include pseudo(42px,36px, 34px,4px,($colorHeader),1);
+            border-radius:4px;
+            position:absolute;
             transform: rotate(-45deg);
-            top: 42px;
-            left: 36px;
-        }
+            }
         &:after{
-            @extend %arrows;
+          @include pseudo(42px,14px, 34px,4px,($colorHeader),1);
+            border-radius:4px;
             transform: rotate(45deg);
-            top: 42px;
-            left: 14px;
+            position:absolute;
 
-        }
-
-        &:hover{
+            }
+        &:hover{transition:.55s;
             box-shadow:0px 0px 8px  white;
         }
     }
@@ -144,18 +121,9 @@ header{
             margin-right:15px;
             margin-left:10px;
             opacity:0;
-            -webkit-animation:anav .75s linear 1.75s forwards;
-            animation:anav .75s linear 1.75s forwards; 
             &:after{
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                height: 1px;
-                background: white;
-                content: '';
-                opacity:0;
-
+               @include pseudo(100%, 0px, 100%,1px,($colorHeader),0);
+                          
             }
             &:hover{
                 &:after{
@@ -165,15 +133,11 @@ header{
             }
         }
     }
-
-
-
-
 }
 section{ @include size(100%,120%);
          position:relative;
          box-sizing: border-box;
-    h2{box-sizing:inherit;
+    h3{box-sizing:inherit;
         @include size(50%,12%);
          @include font(54px,( 'Bilbo', cursive),($colorSectionFoodH));
          margin:0 auto;
@@ -181,36 +145,28 @@ section{ @include size(100%,120%);
          padding-top:5%;
          box-sizing: border-box;
     }
-    h3{
+    h4{
         @include size(100%,12%);
          @include font(38px,( 'Bilbo', cursive),($colorSectionFoodH));
          box-sizing: border-box;
          padding:4% 7% 1%;
          
          &:after{
-            width:3%;
-            top:120%;
-            left:0px;
-            content:'';
-            display:block;
-            height:1px;
-            border-radius: 6px;
-            background-color:$colorSectionFoodH;
+             @include pseudo(160%, 0px, 3%,1px,($colorSectionFoodH),1);
+              border-radius: 6px;
         }
     }
     ul{  @include size(100%,32%);
          @include font(22px,( 'Lora', cursive),($colorSectionFoodH));
          padding:4% 8%; 
          box-sizing: border-box;
-
         li{
             list-style-type:circle;
             line-height:1.5;
-            
-        }
+           }
     }
     footer{
-        @include size(100%,45%);
+        @include size(100%,44%);
         position:relative; 
         box-sizing: border-box;
       .img{
@@ -220,15 +176,14 @@ section{ @include size(100%,120%);
         background-image: url('../img/food.jpg');
         }  
     }
-    
-    
+   
 }
 #transportation{
          
-    h2, h3, ul{
+    h4, h3, ul{
         color:#FF7208;
     }
-    h3:after{
+    h4:after{
         background-color:#FF7208; 
     }
     footer{
@@ -239,11 +194,11 @@ section{ @include size(100%,120%);
 }
 #electricity{
        background-color: #333;  
-    h2, h3, ul{
+    h4, h3, ul{
         color:#FFF14E;
         background-color: #333;
     }
-    h3:after{
+    h4:after{
         background-color:#FFF14E; 
     }
     footer{
@@ -253,11 +208,10 @@ section{ @include size(100%,120%);
     }
 }
 #water{
-         
-    h2, h3, ul{
+    h4, h3, ul{
         color:#4D5E7F;
     }
-    h3:after{
+    h4:after{
         background-color:#4D5E7F; 
     }
     footer{
@@ -265,6 +219,19 @@ section{ @include size(100%,120%);
             background-image: url('../img/faucet.jpg');
         }
     }
+}
+
+footer{ 
+h5{
+   @include size(80%, 50%);
+   @include font(54px,( 'Bilbo', cursive),#09C942);
+   margin:0 auto;
+   padding-top:15%;
+   box-sizing:border-box;
+}
+
+
+
 }
 @keyframes header{
     0%{opacity:0;transform:translateY(100px);}
