@@ -1,8 +1,8 @@
 html, body, header, footer {
   width: 100%;
   height: 100%;
-  position: relative;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  position: relative; }
 
 .bckg, header .img, section footer .img {
   position: absolute;
@@ -12,133 +12,145 @@ html, body, header, footer {
   background-repeat: no-repeat;
   background-size: cover; }
 
-header .img {
+header {
   width: 100%;
   height: 100%;
-  background-image: url("../img/lisc.jpg"); }
-header h1 {
-  font-size: 86px;
-  font-family: "Bilbo", cursive;
-  color: #faffc8;
-  text-shadow: 1px 1px #143214;
-  width: 80%;
-  padding: 7% 0% 3% 5.25%;
-  position: relative;
-  line-height: 1.5;
-  letter-spacing: .05em;
-  opacity: 0; }
-  header h1:after {
-    display: block;
-    content: '';
-    opacity: 1;
-    top: 100%;
-    left: 0px;
-    width: 5%;
-    height: 2px;
-    background: #faffc8;
-    display: block;
-    border-radius: 6px; }
-header h2 {
-  font-size: 30px;
-  font-family: "Bilbo", cursive;
-  color: #faffc8;
-  width: 80%;
-  opacity: 0;
-  padding: 0% 0% 7% 5.25%;
-  position: relative; }
-header .arrow {
-  position: relative;
-  width: 85px;
-  height: 85px;
-  border-radius: 50%;
-  border: 3px solid #faffc8;
-  margin-left: 7%;
-  cursor: pointer;
-  display: block;
-  opacity: 0; }
-  header .arrow:before {
-    display: block;
-    content: '';
-    opacity: 1;
-    top: 42px;
-    left: 36px;
-    width: 34px;
-    height: 4px;
-    background: #faffc8;
-    border-radius: 4px;
-    position: absolute;
-    transform: rotate(-45deg); }
-  header .arrow:after {
-    display: block;
-    content: '';
-    opacity: 1;
-    top: 42px;
-    left: 14px;
-    width: 34px;
-    height: 4px;
-    background: #faffc8;
-    border-radius: 4px;
-    transform: rotate(45deg);
-    position: absolute; }
-  header .arrow:hover {
-    transition: .55s;
-    box-shadow: 0px 0px 8px  white; }
-header nav {
-  position: absolute;
-  width: 98%;
-  top: 16px;
-  display: flex;
-  justify-content: flex-end; }
-  header nav a {
-    font-size: 15px;
+  box-sizing: border-box; }
+  header .img {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-image: url("../img/lisc.jpg"); }
+  header h1 {
+    width: 100%;
+    height: 45%;
+    box-sizing: border-box;
+    font-size: 86px;
     font-family: "Bilbo", cursive;
     color: #faffc8;
-    text-shadow: 1px 1px 4px #0a320a;
-    letter-spacing: .1em;
-    padding: 10px 25px;
-    box-sizing: border-box;
-    display: inline-block;
-    text-decoration: none;
+    text-shadow: 1px 1px #143214;
+    padding: 7% 0% 3% 5.25%;
     position: relative;
-    margin-right: 15px;
-    margin-left: 10px;
+    line-height: 1.5;
+    letter-spacing: .05em;
     opacity: 0; }
-    header nav a:after {
+    header h1:after {
       display: block;
       content: '';
-      opacity: 0;
+      opacity: 1;
       top: 100%;
       left: 0px;
-      width: 100%;
-      height: 1px;
-      background: #faffc8; }
-    header nav a:hover:after {
-      -webkit-animation: anavHover .55s linear forwards;
-      animation: anavHover .55s linear forwards; }
+      width: 5%;
+      height: 2px;
+      background: #faffc8;
+      display: block;
+      border-radius: 6px; }
+  header h2 {
+    width: 100%;
+    height: 20%;
+    box-sizing: border-box;
+    font-size: 30px;
+    font-family: "Bilbo", cursive;
+    color: #faffc8;
+    opacity: 0;
+    padding: 5% 0% 0% 5.25%;
+    position: relative; }
+  header .arrow {
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 3px solid #faffc8;
+    left: 100px;
+    bottom: 20%;
+    cursor: pointer;
+    display: block;
+    opacity: 0; }
+    header .arrow:before {
+      display: block;
+      content: '';
+      opacity: 1;
+      top: 42px;
+      left: 36px;
+      width: 34px;
+      height: 4px;
+      background: #faffc8;
+      border-radius: 4px;
+      position: absolute;
+      transform: rotate(-45deg); }
+    header .arrow:after {
+      display: block;
+      content: '';
+      opacity: 1;
+      top: 42px;
+      left: 14px;
+      width: 34px;
+      height: 4px;
+      background: #faffc8;
+      border-radius: 4px;
+      transform: rotate(45deg);
+      position: absolute; }
+    header .arrow:hover {
+      transition: .55s;
+      box-shadow: 0px 0px 8px  white; }
+  header nav {
+    width: 98%;
+    height: 5%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 16px;
+    display: flex;
+    justify-content: flex-end; }
+    header nav a {
+      font-size: 15px;
+      font-family: "Bilbo", cursive;
+      color: #faffc8;
+      text-shadow: 1px 1px 4px #0a320a;
+      letter-spacing: .1em;
+      padding: 10px 25px;
+      box-sizing: border-box;
+      display: inline-block;
+      text-decoration: none;
+      position: relative;
+      margin-right: 15px;
+      margin-left: 10px;
+      opacity: 0; }
+      header nav a:after {
+        display: block;
+        content: '';
+        opacity: 0;
+        top: 100%;
+        left: 0px;
+        width: 100%;
+        height: 1px;
+        background: #faffc8; }
+      header nav a:hover:after {
+        -webkit-animation: anavHover .55s linear forwards;
+        animation: anavHover .55s linear forwards; }
 
 section {
   width: 100%;
   height: 120%;
+  box-sizing: border-box;
   position: relative;
-  box-sizing: border-box; }
+  z-index: 1; }
   section h3 {
-    box-sizing: inherit;
     width: 50%;
     height: 12%;
+    box-sizing: border-box;
     font-size: 54px;
     font-family: "Bilbo", cursive;
     color: #FF5C6E;
     margin: 0 auto;
     text-align: right;
-    padding-top: 5%;
-    box-sizing: border-box; }
+    padding-top: 5%; }
   section h4 {
     width: 100%;
     height: 12%;
+    box-sizing: border-box;
     font-size: 38px;
     font-family: "Bilbo", cursive;
     color: #FF5C6E;
-    box-sizing: border-box;
     padding: 4% 7% 1%; }
     section h4:after {
       display: block;
@@ -153,19 +165,19 @@ section {
   section ul {
     width: 100%;
     height: 32%;
+    box-sizing: border-box;
     font-size: 22px;
     font-family: "Lora", cursive;
     color: #FF5C6E;
-    padding: 4% 8%;
-    box-sizing: border-box; }
+    padding: 4% 8%; }
     section ul li {
       list-style-type: circle;
       line-height: 1.5; }
   section footer {
     width: 100%;
     height: 44%;
-    position: relative;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    position: relative; }
     section footer .img {
       width: 100%;
       height: 100%;
@@ -196,15 +208,40 @@ section {
 #water footer .img {
   background-image: url("../img/faucet.jpg"); }
 
-footer h5 {
-  width: 80%;
-  height: 50%;
-  font-size: 54px;
-  font-family: "Bilbo", cursive;
-  color: #09C942;
-  margin: 0 auto;
-  padding-top: 15%;
-  box-sizing: border-box; }
+footer {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  z-index: 0; }
+  footer .skewed {
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
+    transform: skewY(3deg);
+    -webkit-transform: skewY(3deg);
+    background-color: #fff; }
+    footer .skewed h5 {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      font-size: 54px;
+      font-family: "Bilbo", cursive;
+      color: #09C942;
+      transform: skewY(-3deg);
+      -webkit-transform: skewY(-3deg);
+      margin: 0 auto;
+      padding-top: 10%;
+      padding-left: 8%;
+      box-sizing: border-box; }
+  footer .imgF {
+    width: 100%;
+    height: calc(50% + 300px);
+    box-sizing: border-box;
+    margin-top: -300px;
+    background-image: url("../img/lisc.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover; }
 
 @keyframes header {
   0% {
@@ -225,5 +262,78 @@ footer h5 {
     opacity: 0; }
   100% {
     opacity: 1; } }
+@media only screen and (max-width: 900px) {
+  section h3 {
+    width: 90%; }
+
+  #electricity footer .img {
+    background-image: url("../img/bulb_min.jpg"); }
+
+  #transportation footer .img {
+    background-image: url("../img/bike_min.jpg"); }
+
+  #water footer .img {
+    background-image: url("../img/faucet_min.jpg"); } }
+@media only screen and (max-width: 600px) {
+  header h1 {
+    padding-top: 20%;
+    font-size: 66px; }
+  header h2 {
+    font-size: 30px; }
+  header nav a {
+    padding: 10px 15px; }
+
+  section h3 {
+    font-size: 44px;
+    padding-top: 9%;
+    height: 16%; }
+  section h4 {
+    font-size: 30px;
+    height: 13%; }
+  section ul {
+    font-size: 16px;
+    height: 27%; } }
+@media only screen and (max-height: 650px) {
+  header h1 {
+    padding-top: 8%;
+    font-size: 66px; }
+  header h2 {
+    margin-top: 16%;
+    font-size: 25px; }
+  header .arrow {
+    bottom: 17%;
+    left: inherit;
+    right: 80px; }
+  header nav a {
+    font-size: 12px; }
+
+  section h3 {
+    font-size: 24px;
+    padding-top: 9%;
+    height: 16%; }
+  section h4 {
+    font-size: 18px;
+    height: 13%;
+    padding-top: 2%; }
+  section ul {
+    font-size: 12px;
+    height: 27%;
+    padding-top: 2%; }
+
+  footer .skewed h5 {
+    font-size: 28px; } }
+@media only screen and (max-width: 450px) {
+  header h1 {
+    padding-top: 40%;
+    font-size: 44px; }
+  header h2 {
+    font-size: 24px; }
+  header nav {
+    justify-content: space-around; }
+    header nav a {
+      font-size: 12px;
+      width: auto;
+      padding: 10px 10px;
+      margin: 5px; } }
 
 /*# sourceMappingURL=zielony.css.map */
