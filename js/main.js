@@ -4,11 +4,8 @@
     var headerH2=$('h2');
     var arrow=$('.arrow');
     var nav=$('nav>a');
-    
-   $.stellar();
+       $.stellar();
    
-   $(document).ready(function(){
-       console.log('ready');
        headerH1.css({
            '-webkit-animation':'header .75s linear .75s forwards',
             'animation':'header .75s linear .75s forwards'
@@ -25,7 +22,7 @@
            '-webkit-animation':'anav .75s linear 1.75s forwards',
             'animation':'anav .75s linear 1.75s forwards' 
        });
-   });
+   
    
 }());
  

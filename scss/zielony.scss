@@ -336,7 +336,7 @@ footer{
             font-size:66px;
         }
         h2{
-           margin-top:16%;
+           margin-top:5%;
             
            font-size:25px; 
         }
@@ -402,4 +402,14 @@ footer{
         }
     }
     }
-    
+     @media only screen and (max-height: 460px){
+        
+         header{
+       
+        h2{
+           margin-top:13%;
+            
+           font-size:25px; 
+        }
+         }
+     }
