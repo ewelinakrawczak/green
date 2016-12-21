@@ -23,9 +23,22 @@
             'animation':'anav .75s linear 1.75s forwards' 
        });
    
+   var anchor = $('[href]');
+   
+   
+   anchor.on('click',function(){
+       anchor.preventDefault();
+     
+       
+        var menuItemPosTop = parseInt( $($(this).attr('href')).offset().top, 10)+2;
+ 
+       $('html, body').animate({
+            scrollTop: menuItemPosTop,
+            easing:'linear'
+        }, 1800);
+        
+   });
    
 }());
  
-            
-            
             
