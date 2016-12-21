@@ -42,6 +42,7 @@ $colorSectionFoodUL:#CC0D22;
 html,body,header, footer{
     @include size(100%, 100% );
     position:relative;
+    outline:none;
 
 }
 .bckg{
@@ -106,7 +107,7 @@ header{
         }
     }
     nav{
-        @include size(98%,5%);
+       width:98%;
         position:absolute;
         top:16px;
         display:flex;
@@ -114,7 +115,7 @@ header{
         a{  @include font(15px,( 'Bilbo', cursive),($colorHeader));
             text-shadow:1px 1px 4px rgb(10,50,10);
             letter-spacing:.1em;
-            padding: 10px 25px;
+            padding: 10px 15px;
             box-sizing:border-box;
             display:inline-block;
             text-decoration:none;
@@ -138,6 +139,7 @@ header{
 section{ @include size(100%,120%);
          position:relative;
          z-index:1;
+          outline:none;
          h3{
              @include size(50%,12%);
              @include font(54px,( 'Bilbo', cursive),($colorSectionFoodH));
@@ -304,9 +306,15 @@ footer{
             
             font-size:30px; 
         }
-        nav{
+         nav{
+           justify-content:space-around;
+           
+            
             a{
-                padding:10px 15px;
+                font-size:12px;
+                width:auto;
+                padding:10px 5px;
+                margin:5px;
             }
         }
         
@@ -336,7 +344,7 @@ footer{
             font-size:66px;
         }
         h2{
-           margin-top:5%;
+           margin-top:15%;
             
            font-size:25px; 
         }
@@ -380,36 +388,33 @@ footer{
             }
         }
         }
-    @media only screen and (max-width: 450px) {
+    @media (max-width: 450px),(max-height: 450px) {
          header{
         h1{
-            padding-top:40%;
-            font-size:44px;
+            height:20%;
+            padding-top:calc( 145px + 5%);
+            font-size:30px;
         }
         h2{
-            font-size:24px; 
+            height:15%;
+            font-size:20px; 
+            margin-top:80px;
         }
-        nav{
-           justify-content:space-around;
-           
+         nav{
+           align-items: center;
+          flex-direction:column;
+          
             
             a{
                 font-size:12px;
-                width:auto;
-                padding:10px 10px;
+                padding:2px;
                 margin:5px;
             }
         }
-    }
-    }
-     @media only screen and (max-height: 460px){
-        
-         header{
-       
-        h2{
-           margin-top:13%;
-            
-           font-size:25px; 
+        .arrow{
+            display:none;
         }
-         }
-     }
+       
+    }
+    }
+     
