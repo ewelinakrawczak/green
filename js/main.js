@@ -27,7 +27,7 @@
    
    
    anchor.on('click',function(){
-
+anchor.preventDefault();
         var menuItemPosTop = parseInt( $($(this).attr('href')).offset().top, 10)+2;
  
        $('html, body').animate({
